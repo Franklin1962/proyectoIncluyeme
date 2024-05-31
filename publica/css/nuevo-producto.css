@@ -1,0 +1,254 @@
+/* Formato Generales del sitio */
+html {
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --gris: #737373;
+    --fondo-barra: #1b64c4;
+    --texto-barra: #111110;
+    --Comprar: #D2E117;
+    --fondo-redes: #535450;
+    --boton-hover: #05206b;
+    --blanco: #dadada;
+    --negro: #000000;
+}
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: block;
+    text-align: center;
+    background-color: var(--fondo-barra);
+    height: 10rem;
+}
+.ubicacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ubicacion i {
+    align-items: center;
+    padding: 1rem;
+    color: var(--blanco);
+    font-size: 1.5rem;
+}
+
+.ubicacion p {
+    color: var(--blanco);
+    font-size: 1rem;
+}
+.logo {
+    font-size: 2rem;
+    font-family: "Rubik Scribble";
+    font-weight: 700;
+    font-style: italic;
+    margin-left: 2rem;
+}
+.logo h1 {
+    color: var(--blanco);
+    margin: 0;
+}
+span{
+    font-weight:  bold;
+    color: rgb(135, 233, 6);   
+}
+
+.usuario-carrito {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    /*height: 5rem;
+    width: 5rem;
+    border-radius: 50%;*/
+}
+
+.fa-cart-shopping{
+    cursor: pointer;
+    color: var(--blanco);
+    transition: all .3s ease;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.fa-user{
+    cursor: pointer;
+    color: var(--blanco);
+    transition: all .3s ease;
+    margin-right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+
+.contenedor-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fondo-barra);
+    text-align: center;
+}
+.navegacion li {
+    text-align: center;
+}
+.navegacion  a {
+    font-size: 1.8rem;
+    color: var(--texto-barra);
+}
+.navegacion a:hover{
+    padding: 0.3rem;
+    font-size: 1.5;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilo del formulario */
+.formulario-producto {
+    max-width: 60rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los campos del formulario */
+.formulario-campo {
+    margin-bottom: 18px;
+}
+
+.formulario-campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.formulario-campo input[type="text"],
+.formulario-campo input[type="number"],
+.formulario-campo input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formulario-campo input[type="text"]:focus,
+.formulario-campo input[type="number"]:focus,
+.formulario-campo input[type="file"]:focus {
+    border-color: var(--fondo-redes);
+    outline: none;
+    box-shadow: 0 0 5px rgba(136, 136, 136, 0.5);
+}
+
+/* Estilo del botón */
+.boton {
+    display: inline-block;
+    background-color: #e60000;
+    color: var(--blanco);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.boton:hover {
+    background-color: red;
+}
+
+.footer {
+    background-color: var(--fondo-barra);
+    display: block;
+    text-align: center;
+    height: 10rem;
+    align-items: center;
+    margin: 2 0 rem;
+}
+.redesSociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 2rem ;
+
+}
+
+.fa-facebook {
+    color: rgb(218, 219, 221);
+    font-size: 2rem;
+}
+
+.fa-square-instagram {
+    color:rgb(231, 33, 139);
+    font-size: 2rem;
+}
+.fa-whatsapp {
+    font-size: 2rem;
+    color: rgb(0, 252, 42);
+}
+.fa-envelope {
+    font-size: 2rem;
+    color: rgb(196, 224, 35);
+}
+
+/**********Medias Query*************/
+
+
+
+
+@media (min-width: 768px){
+    .contenedor {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center ;
+        margin: 5rem;
+        padding: 2rem;
+    }
+}

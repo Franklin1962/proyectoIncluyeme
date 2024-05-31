@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Nuevo Producto</title>
+    <link rel="stylesheet" type="text/css" href="/css/nuevo-producto.css">
+    <link rel="stylesheet" type="text/css" href="/css/normaliza.css">
+    
+    <script src="https://kit.fontawesome.com/5bad72963f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik+Scribble&display=swap" rel="hoja de estilo">
+</head>
+<body>
+    <header class="header">
+        <div class="ubicacion">
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+                <p>Madrid, España</p>
+            </div> 
+        </div>          
+        <div class="contenedor-logo">
+            <div class="logo">
+            <h1>Leo<span>Shop</span></h1>
+            </div>
+            <div class="usuario-carrito" >
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>    
+                </div>
+                <div>
+                    <i class="fa-regular fa-user"></i>
+                </div>    
+            </div>
+        </div>
+        </div> 
+    </header>   <!-- fin del Header -->
+    
+    <nav>
+        <ul class="navegacion">
+            <li><a href="/">Home </a></li>
+        </ul>
+    </nav>  
+
+<main>
+    <h1>Agregar Nuevo Producto</h1>
+
+<form action="/productos" method="POST" enctype="multipart/form-data" class="formulario-producto">
+    <div class="formulario-campo">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <div class="formulario-campo">
+        <label for="descripcion">Descripcion del Producto:</label>
+        <input type="text" id="descripcion" name="descripcion" required>
+    </div>
+    <div class="formulario-campo">
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" required>
+    </div>
+    <div class="formulario-campo">
+        <label for="image">Imagen:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+    </div>
+    <div class="formulario-campo">
+        <button type="submit" class="boton">Agregar Producto</button>
+    </div>
+</form>
+</main>
+    
+    <footer class="footer" >
+
+        <div class="redesSociales">
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+                <i class="fi fi-rs-paper-plane"></i>
+            </div>
+        </div>
+        <div>&copy; 2024 LeoStored | Todos los derechos reservados</div> 
+    </footer>
+
+</body>
+</html>

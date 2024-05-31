@@ -1,0 +1,273 @@
+/* Formato Generales del sitio */
+html {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --gris: #737373;
+    --fondo-barra: #1b64c4;
+    --texto-barra: #111110;
+    --Comprar: #D2E117;
+    --fondo-redes: #535450;
+    --boton-hover: #05206b;
+    --blanco: #dadada;
+    --negro: #000000;
+}
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: block;
+    text-align: center;
+    background-color: var(--fondo-barra);
+    height: 10rem;
+}
+.ubicacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ubicacion i {
+    align-items: center;
+    padding: 1rem;
+    color: var(--blanco);
+    font-size: 1.5rem;
+}
+
+.ubicacion p {
+    color: var(--blanco);
+    font-size: 1rem;
+}
+.logo {
+    font-size: 2rem;
+    font-family: "Rubik Scribble";
+    font-weight: 700;
+    font-style: italic;
+    margin-left: 2rem;
+}
+.logo h1 {
+    color: var(--blanco);
+    margin: 0;
+}
+span{
+    font-weight:  bold;
+    color: rgb(36, 221, 19);   
+}
+.usuario-carrito {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    /*height: 5rem;
+    width: 5rem;
+    border-radius: 50%;*/
+}
+
+.fa-cart-shopping{
+    cursor: pointer;
+    color: var(--blanco);
+    transition: all .3s ease;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.fa-user{
+    cursor: pointer;
+    color: var(--blanco);
+    transition: all .3s ease;
+    margin-right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+
+.contenedor-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacion li {
+    text-align: center;
+}
+.navegacion  a {
+    font-size: 1.8rem;
+   color: var(--texto-barra);
+}
+.navegacion a:hover{
+    padding: 0.3rem;
+    font-size: 1.5rem;
+}
+
+main {
+    background-image: url(/imagenes/comercio.jpg);
+    height: 50rem;
+    width:  100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+.contenido_imagen {
+    height: 10rem;
+    width: 10rem;
+    border: solid var(--fondo-barra);
+    ;
+}
+
+.contenedor {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem;
+}
+.productos-descripcion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem;
+        padding: 2rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+}
+.productos-descripcion h3 p {
+    font-size: 0.8rem;
+}
+
+.productos-descripcion img:hover {
+    transform: scale(1.4);
+    transition: all 0.5s;
+}
+
+strong{
+    font-weight:  bold;
+    color: red; 
+}
+
+.agregarAlCarrito {
+    background-color: var(--Comprar);
+    color: var(--texto-barra);
+    font-size: 15px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.cantidad{
+    background-color: var(--Comprar);
+    color: var(--texto-barra);
+    font-size: 15px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+
+.footer {
+    background-color: var(--fondo-barra);
+    display: block;
+    text-align: center;
+    height: 10rem;
+    align-items: center;
+    margin: 2 0 rem;
+}
+.redesSociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 2rem ;
+
+}
+
+.fa-facebook {
+    color: rgb(218, 219, 221);
+    font-size: 2rem;
+}
+
+.fa-square-instagram {
+    color:rgb(231, 33, 139);
+    font-size: 2rem;
+}
+.fa-whatsapp {
+    font-size: 2rem;
+    color: rgb(0, 252, 42);
+}
+.fa-envelope {
+    font-size: 2rem;
+    color: rgb(196, 224, 35);
+}
+
+/**********Medias Query*************/
+
+@media (min-width:515px ) {
+    .navegacion{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--fondo-barra);
+        padding: 0.8rem;
+    }
+    .navegacion a{
+        color: var(--blanco);
+    }
+    .navegacion a:hover{
+        background-color: var(--boton-hover);
+        padding: 0.5rem;
+        font-size: 3rem;
+    }
+    
+    .navegacion{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--fondo-barra);
+    }
+}
+
+
+@media (min-width: 768px){
+    .contenedor {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center ;
+        margin: 5rem;
+        padding: 2rem;
+    }
+}
+
+

@@ -1,0 +1,15 @@
+# Configuración de finales de línea para todos los archivos de texto
+* text=auto
+
+# Configuración específica para JSON (usar LF)
+*.json text eol=lf
+
+# Configuración específica para archivos JavaScript (usar LF)
+*.js text eol=lf
+
+# Configuración específica para archivos CSS (usar LF)
+*.css text eol=lf
+
+# Configuración específica para archivos HTML (usar LF)
+*.html text eol=lf
+

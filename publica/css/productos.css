@@ -1,0 +1,324 @@
+/* Formato Generales del sitio */
+html {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --gris: #737373;
+    --fondo-barra: #1b64c4;
+    --texto-barra: #111110;
+    --Comprar: #D2E117;
+    --fondo-redes: #535450;
+    --boton-hover: #05206b;
+    --blanco: #dadada;
+    --negro: #000000;
+}
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: block;
+    text-align: center;
+    background-color: var(--fondo-barra);
+    height: 10rem;
+}
+.ubicacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ubicacion i {
+    align-items: center;
+    padding: 1rem;
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.ubicacion p {
+    color: var(--blanco);
+    font-size: 1rem;
+}
+.logo {
+    font-size: 2rem;
+    font-family: "Rubik Scribble";
+    font-weight: 700;
+    font-style: italic;
+    margin-left: 2rem;
+}
+.logo h1 {
+    color: var(--blanco);
+    margin: 0;
+}
+span{
+    font-weight:  bold;
+    color: rgb(135, 233, 6);   
+}
+.usuario-carrito {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    /*height: 5rem;
+    width: 5rem;
+    border-radius: 50%;*/
+}
+
+.fa-cart-shopping{
+    cursor: pointer;
+    color: var(--blanco);
+    transition: all .3s ease;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.fa-user{
+    cursor: pointer;
+    color: var(--blanco);
+    transition: all .3s ease;
+    margin-right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.contenedor-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacion li {
+    text-align: center;
+}
+.navegacion  a {
+    font-size: 1.8rem;  
+    color: var(--texto-barra);
+}
+.navegacion a:hover{
+    padding: 0.3rem;
+    font-size: 1.5;
+}
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilo del contenedor de productos */
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor-productos ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo para cada producto */
+.producto {
+    width: 250px;
+    margin: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto-contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.producto-nombre {
+    font-size: 1.5em;
+    color: #333;
+    margin: 1rem 0;
+}
+
+.producto-descripcion {
+    color: #666;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.producto-precio {
+    color: #e60000;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.producto-formulario {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Estilo del botón */
+.boton {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    width: 6.5rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin:0.5rem 0.2rem;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    transition: background-color 0.2s;
+} 
+
+.boton:hover {
+    background-color: #cc0000;
+}
+
+.nuevoProducto {
+    display: f;
+    background-color:var(--fondo-barra);
+    border-radius: 0.8rem; 
+    margin: 4rem; 
+    width: 20rem;
+    height: 4rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    color: var(--blanco);
+    text-align: center;
+    margin: 1rem
+    
+    
+}
+
+.nuevoProducto a{
+   font-size: 1.5rem;
+   font-family: Verdana, Geneva, Tahoma, sans-serif; 
+   color: var(--blanco);
+   text-align: center;
+   margin: 1rem; 
+}
+
+.nuevoProducto a:hover {
+    transform: scale(0.8);
+    transition: all 0.5s;
+}
+
+.footer {
+    background-color: var(--fondo-barra);
+    display: block;
+    text-align: center;
+    height: 10rem;
+    align-items: center;
+    margin: 2 0 rem;
+}
+.redesSociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 2rem ;
+
+}
+
+.fa-facebook {
+    color: rgb(218, 219, 221);
+    font-size: 2rem;
+}
+
+.fa-square-instagram {
+    color:rgb(231, 33, 139);
+    font-size: 2rem;
+}
+.fa-whatsapp {
+    font-size: 2rem;
+    color: rgb(0, 252, 42);
+}
+.fa-envelope {
+    font-size: 2rem;
+    color: rgb(196, 224, 35);
+}
+
+/**********Medias Query*************/
+
+@media (min-width:515px ) {
+    .navegacion{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--fondo-barra);
+        padding: 0.8rem;
+    }
+    .navegacion a{
+        color: var(--blanco);
+    }
+    .navegacion a:hover{
+        background-color: var(--boton-hover);
+        padding: 0.5rem;
+        font-size: 3rem;
+    }
+    
+    .navegacion{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--fondo-barra);
+    }
+}
+
+
+@media (min-width: 768px){
+    .contenedor {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center ;
+        margin: 5rem;
+        padding: 2rem;
+    }
+}

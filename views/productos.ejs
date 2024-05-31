@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LeoStored</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/productos.css">
+    <script src="https://kit.fontawesome.com/5bad72963f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik+Scribble&display=swap" rel="hoja de estilo">
+
+</head>
+<body>
+    <header class="header">
+        <div class="ubicacion">
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+                <p>Madrid, España</p>
+            </div> 
+        </div>          
+        <div class="contenedor-logo">
+            <div class="logo">
+            <h1>Leo<span>Shop</span></h1>
+            </div>
+            <div class="usuario-carrito" >
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>    
+                </div>
+                <div>
+                    <i class="fa-regular fa-user"></i>
+                </div>    
+            </div>
+        </div>
+        </div> 
+    </header>   <!-- fin del Header -->
+    <!-- Barra dde Navegacion -->
+        <nav>
+            <ul class="navegacion">
+                <li><a href="/">Home </a></li>
+                <li><a href="/productos/nuevo"> Ingresar Nuevo Producto</a></li>
+            </ul>
+        </nav>  
+
+    <main>
+        <h1>Nuestros Productos</h1>
+        <div class="contenedor-productos">
+            <ul>
+                <% productos.forEach(function(producto) { %>
+                    <li class="producto">
+                        <div class="producto-contenido">
+                            <img src="<%= producto.imagenes %>" alt="<%= producto.nombre %>" class="producto-imagen">
+                            <h3 class="producto-nombre"><%= producto.nombre %></h3>
+                            <p class="producto-descripcion"><%= producto.descripcion %></p>
+                            <strong class="producto-precio">Precio: &euro;<%= producto.precio %></strong><br>
+                            <form action="/productos/<%= producto.id %>?_method=DELETE" method="POST" class="producto-formulario">
+                                <button class="boton" type="submit">Eliminar</button>
+                            </form>
+                        </div>
+                    </li>
+                    <% }); %>
+                </ul>
+            </div>
+            <br>
+        <br>
+    </main>
+    
+         
+    
+
+    <footer class="footer" >
+
+        <div class="redesSociales">
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+                <i class="fi fi-rs-paper-plane"></i>
+            </div>
+        </div>
+        <div>&copy; 2024 LeoStored | Todos los derechos reservados</div> 
+    </footer>
+
+</body>
+</html>
