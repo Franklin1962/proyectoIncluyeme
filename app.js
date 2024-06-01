@@ -8,11 +8,11 @@ const app = express();
 const port = 3000;
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views')); //Configuracion del motor de plantllas y vistas
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(methodOverride('_method'));
-app.use(express.static(path.join(__dirname, 'publica')));
+app.use(bodyParser.urlencoded({ extended: true })); //Manejar datos del formulario
+app.use(methodOverride('_method')); // Maneja las solicitudes DELETE desde un formulario
+app.use('/imagenes',express.static(path.join(__dirname, 'publica/imagenes'))); //Manejar los archivos estaticos
 
 app.use('/', productosRouter);
 

@@ -27,6 +27,7 @@ exports.obtenerProductos = (req, res) => {
         if (err) {
             return res.status(500).send('Error leyendo el archivo de productos.');
         }
+        //console.log('productos:', productos);
         res.render('productos', { productos });
     });
 };

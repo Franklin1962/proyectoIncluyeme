@@ -23,12 +23,12 @@ router.get('/', (req, res) => {
     res.render('home');
 });
 
-router.get('/productos', productosController.obtenerProductos);
+router.get('/productos', productosController.obtenerProductos); // ruta para mostrar los productos
 
-router.get('/productos/nuevo', productosController.mostrarFormularioNuevoProducto);
+router.get('/productos/nuevo', productosController.mostrarFormularioNuevoProducto);//Ruta para mostrar el Formulario para ingresar un nuevo producto
 
-router.post('/productos', upload.single('image'), productosController.crearProducto);
+router.post('/productos', upload.single('image'), productosController.crearProducto); //Ruta para crear un nuevo producto
 
-router.delete('/productos/:id', productosController.eliminarProducto);
+router.delete('/productos/:id', productosController.eliminarProducto); // Ruta para eliminar un producto
 
 module.exports = router;
