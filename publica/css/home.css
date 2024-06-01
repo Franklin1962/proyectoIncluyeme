@@ -50,21 +50,24 @@ a {
     align-items: center;
     padding: 1rem;
     color: var(--blanco);
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
 .ubicacion p {
     color: var(--blanco);
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
+
 .logo {
-    font-size: 2rem;
+    
     font-family: "Rubik Scribble";
     font-weight: 700;
     font-style: italic;
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 .logo h1 {
+    font-size: 4rem;
+    font-weight: bold;
     color: var(--blanco);
     margin: 0;
 }

@@ -1,12 +1,5 @@
 [
   {
-    "id": 15,
-    "nombre": "Samba Chocolate",
-    "descripcion": "Galleta rellena de Chocolate con  Fresa",
-    "precio": "6",
-    "image": "/imagenes/1716927358720.png"
-  },
-  {
     "id": 16,
     "nombre": "Samba Fresa",
     "descripcion": "Galleta rellena con  Fresa",
@@ -36,6 +29,20 @@
   },
   {
     "id": 22,
+    "nombre": "catalina",
+    "descripcion": "Budin de Caña de Azucar",
+    "precio": "15",
+    "image": "/imagenes/1717122923410.jpg"
+  },
+  {
+    "id": 23,
+    "nombre": "rikesa",
+    "descripcion": "Queso Fundido",
+    "precio": "100",
+    "image": "/imagenes/1717121838570.jpeg"
+  },
+  {
+    "id": 24,
     "nombre": "catalina",
     "descripcion": "Budin de Caña de Azucar",
     "precio": "15",

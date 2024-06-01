@@ -1,96 +1,241 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
-<head>
-    <title>LeoStored</title>
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/css/productos.css">
-    <script src="https://kit.fontawesome.com/5bad72963f.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik+Scribble&display=swap" rel="hoja de estilo">
+    <head>
+        <title>LeoStored</title>
+        <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="/css/productos.css">
+        <script src="https://kit.fontawesome.com/5bad72963f.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik+Scribble&display=swap" rel="hoja de estilo">
 
-</head>
-<body>
-    <header class="header">
-        <div class="ubicacion">
-            <div>
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div>
-                <p>Madrid, España</p>
-            </div> 
-        </div>          
-        <div class="contenedor-logo">
-            <div class="logo">
-            <h1>Leo<span>Shop</span></h1>
-            </div>
-            <div class="usuario-carrito" >
+    </head>
+    <body>
+        <header class="header">
+            <div class="ubicacion">
                 <div>
-                    <i class="fa-solid fa-cart-shopping"></i>    
+                    <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <div>
-                    <i class="fa-regular fa-user"></i>
-                </div>    
+                    <p>Madrid, España</p>
+                </div> 
+            </div>          
+            <div class="contenedor-logo">
+                <div class="logo">
+                <h1>Leo<span>Shop</span></h1>
+                </div>
+                <div class="usuario-carrito" >
+                    <div>
+                        <i class="fa-solid fa-cart-shopping"></i>    
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-user"></i>
+                    </div>    
+                </div>
             </div>
-        </div>
-        </div> 
-    </header>   <!-- fin del Header -->
-    <!-- Barra dde Navegacion -->
-        <nav>
-            <ul class="navegacion">
-                <li><a href="/">Home </a></li>
-                <li><a href="/productos/nuevo"> Ingresar Nuevo Producto</a></li>
-            </ul>
-        </nav>  
-
-    <main>
-        <h1>Nuestros Productos</h1>
-        <div class="contenedor-productos">
-            <ul>
-                <% productos.forEach(function(producto) { %>
-                    <li class="producto">
-                        <div class="producto-contenido">
-                            <img src="<%= producto.imagenes %>" alt="<%= producto.nombre %>" class="producto-imagen">
-                            <h3 class="producto-nombre"><%= producto.nombre %></h3>
-                            <p class="producto-descripcion"><%= producto.descripcion %></p>
-                            <strong class="producto-precio">Precio: &euro;<%= producto.precio %></strong><br>
-                            <form action="/productos/<%= producto.id %>?_method=DELETE" method="POST" class="producto-formulario">
-                                <button class="boton" type="submit">Eliminar</button>
-                            </form>
-                        </div>
-                    </li>
-                    <% }); %>
+            </div> 
+        </header>   <!-- fin del Header -->
+        <!-- Barra dde Navegacion -->
+            <!-- <nav>
+                <ul class="navegacion">
+                    <li><a href="/">Home </a></li>
+                    <li><a href="/productos/nuevo"> Ingresar Nuevo Producto</a></li>
                 </ul>
-            </div>
+            </nav>  
+
+        <main>
+            <h1>Nuestros Productos</h1>
+            <div class="contenedor-productos">
+                <ul>
+                    <% productos.forEach(function(producto) { %>
+                        <li class="producto">
+                            <div class="producto-contenido">
+                                <img src="<%= producto.imagenes %>" alt="<%= producto.nombre %>" class="producto-imagen">
+                                <h3 class="producto-nombre"><%= producto.nombre %></h3>
+                                <p class="producto-descripcion"><%= producto.descripcion %></p>
+                                <strong class="producto-precio">Precio: &euro;<%= producto.precio %></strong><br>
+                                <form action="/productos/<%= producto.id %>?_method=DELETE" method="POST" class="producto-formulario">
+                                    <button class="boton" type="submit">Eliminar</button>
+                                </form>
+                            </div>
+                        </li>
+                        <% }); %>
+                    </ul>
+                </div>
+                <br>
             <br>
-        <br>
-    </main>
-    
-         
-    
+        </main>
+        <section class="recetas" >
+            <h1 class="titulo-recetas" >Recetas</h1>
+            <div class="contenido" >
+                <div class="contenido-receta" >
+                    <img src="/imagenes/jigote-catamarqueno.jpg">
+                    <p>Lleva carne picada, de res o de cabra, queso de cabra, huevos duros, papas, pan, cebollas, sal y condimentos.
 
-    <footer class="footer" >
+                        Se hace una mezcla de agua o un caldo con sal y algunos condimentos como comino, orégano, pimienta y pimentón en polvo. Se cubre con  aceite el fondo de una cacerola y los ingredientes se van colocando por capas o pisos.
+                        
+                        Primero una capa de cebollas en rodajas, a continuación una de carne picada, siguiendo con pisos de queso en rodajas, huevo duro rebanado y finalizando con rebanadas de pan.
+                        
+                        Para un jigote más grande se deben colocar otras capas en el mismo orden. Tras poner cada una se rocía con el aderezo hecho con los condimentos. Luego de la cocción queda con la apariencia de una lasaña.</p>
+                </div>
+                <div class="contenido-receta" >
+                    <img src="/imagenes/mbaipy-arg.jpg" alt="">
+                    <p>EUno de los platillos correntinos de herencia guaraní es el mbaipy, una preparación muy calórica que tiene como base la harina de maíz amarillo, aunque hay variantes con harina de mandioca, trigo y maíz blanco.
 
-        <div class="redesSociales">
-            <div>
-                <i class="fa-brands fa-facebook"></i>
+                        Los otros ingredientes son vegetales, queso y un componente animal que puede ser pollo, chorizo colorado o charqui.
+                        
+                        La receta se propagó del campo a las ciudades, donde preparan el mbaipy principalmente con pollo o con el embutido. Aunque tiene similitudes con la polenta tanto en origen como en sabor, son dos platillos diferentes.
+                        
+                        El mbaipy ya era comido por los guaraníes antes de la Conquista, pero fue con el arribo de los españoles que el platillo terminó de conformarse con los aportes de los invasores.
+                        </p>
+                </div>
             </div>
-            <div>
-                <i class="fa-brands fa-square-instagram"></i>
-            </div>
-            <div>
-                <i class="fa-brands fa-whatsapp"></i>
-            </div>
-            <div>
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div>
-                <i class="fi fi-rs-paper-plane"></i>
-            </div>
-        </div>
-        <div>&copy; 2024 LeoStored | Todos los derechos reservados</div> 
-    </footer>
+        </section>
+        
+        <footer class="footer" >
 
-</body>
+            <div class="redesSociales">
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                    <i class="fi fi-rs-paper-plane"></i>
+                </div>
+            </div>
+            <div>&copy; 2024 LeoStored | Todos los derechos reservados</div> 
+        </footer>
+
+    </body>
+</html> --> 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LeoStored</title>
+        <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="/css/productos.css">
+        <script src="https://kit.fontawesome.com/5bad72963f.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik+Scribble&display=swap" rel="hoja de estilo">
+
+    </head>
+    <body>
+        <div class="contenedor" >  
+            <header class="header">
+                <div class="ubicacion">
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p>Madrid, España</p>
+                    </div> 
+                </div>          
+                <div class="contenedor-logo">
+                    <div class="logo">
+                        <h1>Leo<span>Shop</span></h1>
+                    </div>
+                    <div class="usuario-carrito" >
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>    
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-user"></i>   
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </header>   <!-- fin del Header -->
+
+        <!-- Barra dde Navegacion -->
+            <nav>
+                <ul class="navegacion">
+                    <li><a href="/">Home </a></li>
+                    <li><a href="/productos/nuevo"> Ingresar Nuevo Producto</a></li>
+                </ul>
+            </nav>  
+
+        <main>
+            <h1>Nuestros Productos</h1>
+            <div class="contenedor-productos">
+                <ul>
+                    <% productos.forEach(function(producto) { %>
+                        <li class="producto">
+                            <div class="producto-contenido">
+                                <img src="<%= producto.imagenes %>" alt="<%= producto.nombre %>" class="producto-imagen">
+                                <h3 class="producto-nombre"><%= producto.nombre %></h3>
+                                <p class="producto-descripcion"><%= producto.descripcion %></p>
+                                <strong class="producto-precio">Precio: &euro;<%= producto.precio %></strong><br>
+                                <form action="/productos/<%= producto.id %>?_method=DELETE" method="POST" class="producto-formulario">
+                                    <button class="boton" type="submit">Eliminar</button>
+                                </form>
+                            </div>
+                        </li>
+                        <% }); %>
+                    </ul>
+                </div>
+                <br>
+                <br>
+        </main>
+        <section class="recetas" >
+            <h1 class="titulo-recetas" >Recetas</h1>
+            <div class="contenido" >
+                <div class="contenido-receta" >
+                    <img src="/imagenes/jigote-catamarqueno.jpg">
+                    <p>Lleva carne picada, de res o de cabra, queso de cabra, huevos duros, papas, pan, cebollas, sal y condimentos.
+
+                        Se hace una mezcla de agua o un caldo con sal y algunos condimentos como comino, orégano, pimienta y pimentón en polvo. Se cubre con  aceite el fondo de una cacerola y los ingredientes se van colocando por capas o pisos.
+                        
+                        Primero una capa de cebollas en rodajas, a continuación una de carne picada, siguiendo con pisos de queso en rodajas, huevo duro rebanado y finalizando con rebanadas de pan.
+                        
+                        Para un jigote más grande se deben colocar otras capas en el mismo orden. Tras poner cada una se rocía con el aderezo hecho con los condimentos. Luego de la cocción queda con la apariencia de una lasaña.</p>
+                </div>
+                <div class="contenido-receta" >
+                    <img src="/imagenes/mbaipy-arg.jpg" alt="">
+                    <p>EUno de los platillos correntinos de herencia guaraní es el mbaipy, una preparación muy calórica que tiene como base la harina de maíz amarillo, aunque hay variantes con harina de mandioca, trigo y maíz blanco.
+
+                        Los otros ingredientes son vegetales, queso y un componente animal que puede ser pollo, chorizo colorado o charqui.
+                        
+                        La receta se propagó del campo a las ciudades, donde preparan el mbaipy principalmente con pollo o con el embutido. Aunque tiene similitudes con la polenta tanto en origen como en sabor, son dos platillos diferentes.
+                        
+                        El mbaipy ya era comido por los guaraníes antes de la Conquista, pero fue con el arribo de los españoles que el platillo terminó de conformarse con los aportes de los invasores.
+                        </p>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="footer" >
+
+            <div class="redesSociales">
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                    <i class="fi fi-rs-paper-plane"></i>
+                </div>
+            </div>
+            <div>&copy; 2024 LeoStored | Todos los derechos reservados</div> 
+        </footer>
+
+    </body>
 </html>

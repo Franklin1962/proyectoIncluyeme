@@ -1,12 +1,8 @@
 /* Formato Generales del sitio */
-html {
-    box-sizing: border-box;
-}
+
 body{
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 
 html{
@@ -31,7 +27,7 @@ html{
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
 }
 a {
     text-decoration: none;
@@ -52,12 +48,12 @@ a {
     align-items: center;
     padding: 1rem;
     color: var(--blanco);
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
 .ubicacion p {
     color: var(--blanco);
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 .logo {
     font-size: 2rem;
@@ -80,9 +76,6 @@ span{
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    /*height: 5rem;
-    width: 5rem;
-    border-radius: 50%;*/
 }
 
 .fa-cart-shopping{
@@ -120,20 +113,28 @@ span{
 .navegacion{
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: var(--fondo-barra);
-    text-align: center;
+    padding: 0.5rem;
 }
 .navegacion li {
-    text-align: center;
+    list-style: none;
+    margin: 0 1rem;
 }
 .navegacion  a {
-    font-size: 1.8rem;
+    text-decoration: none;
+    font-size: 1.8rem;  
     color: var(--texto-barra);
+    font-weight: bold;
 }
 .navegacion a:hover{
     padding: 0.3rem;
     font-size: 1.5;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
 }
 
 h1 {
@@ -203,11 +204,13 @@ h1 {
 
 .footer {
     background-color: var(--fondo-barra);
-    display: block;
+    position: fixed;
     text-align: center;
-    height: 10rem;
-    align-items: center;
-    margin: 2 0 rem;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #f8f8f8;
+    bottom: 0;
+    width: 100%;
 }
 .redesSociales {
     display: flex;
