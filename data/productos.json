@@ -14,13 +14,6 @@
     "image": "/imagenes/1716997912264.jpg"
   },
   {
-    "id": 18,
-    "nombre": "rikesa",
-    "descripcion": "Queso Fundido",
-    "precio": "9",
-    "image": "/imagenes/1716997994861.jpeg"
-  },
-  {
     "id": 21,
     "nombre": "rikesa",
     "descripcion": "Queso Fundido",
@@ -33,13 +26,6 @@
     "descripcion": "Budin de Caña de Azucar",
     "precio": "15",
     "image": "/imagenes/1717122923410.jpg"
-  },
-  {
-    "id": 23,
-    "nombre": "rikesa",
-    "descripcion": "Queso Fundido",
-    "precio": "100",
-    "image": "/imagenes/1717121838570.jpeg"
   },
   {
     "id": 25,
@@ -82,5 +68,19 @@
     "descripcion": "Maiz Inflado cubierto de Chocolate",
     "precio": "7",
     "image": "/imagenes/1717261399825.jpg"
+  },
+  {
+    "id": 32,
+    "nombre": "Pirulin Coco",
+    "descripcion": "Galleta rellena de Coco",
+    "precio": "8",
+    "image": "/imagenes/1717343150807.jpeg"
+  },
+  {
+    "id": 33,
+    "nombre": "Harina PAN",
+    "descripcion": "Harina de maiz precocido",
+    "precio": "6",
+    "image": "/imagenes/1717343267655.jpg"
   }
 ]
